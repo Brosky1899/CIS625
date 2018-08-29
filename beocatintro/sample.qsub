@@ -1,0 +1,60 @@
+#!/bin/bash
+
+## A Sample qsub script created by Kyle Hutson
+##
+## Note: Usually a '#" at the beginning of the line is ignored. However, in
+## the case of qsub, lines beginning with #$ are commands for qsub itself, so
+## I have taken the convention here of starting *every* line with a '#', just
+## Delete the first one if you want to use that line, and then modify it to
+## your own purposes. The only exception here is the first line, which *must*
+## be #!/bin/bash (or another valid shell).
+
+## Specify the amount of RAM needed _per_core_. Default is 1G
+#$ -l mem=1G
+
+## Specify the maximum runtime. Default is 1 hour (1:00:00)
+#$ -l h_rt=1:00:00
+
+## Require the use of infiniband. If you don't know what this is, you probably
+## don't need it. Default is "FALSE"
+#$ ib=TRUE
+
+## CUDA directive. If You don't know what this is, you probably don't need it
+## Default is "FALSE"
+#$ -l cuda=TRUE
+
+## Parallel environment. Syntax is '-pe Environment NumberOfCores' A list of
+## valid environments can be found at
+## http://support.cis.ksu.edu/BeocatDocs/SunGridEngine (section 3.2). One
+## quick note here. Jobs requesting 16 or fewer cores tend to get scheduled
+## fairly quickly. If you need a job that requires more than that, you might
+## benefit from emailing us at beocat@cis.ksu.edu to see how we can assist in
+## getting your job scheduled in a reasonable amount of time. Default is
+## "single 1"
+#$ -pe single 1
+#$ -pe single 12
+#$ -pe mpi-1 2
+#$ -pe mpi-fill 20
+#$ -pe mpi-spread 16
+
+## Use the current working directory instead of your home directory
+#$ -cwd
+
+## Merge output and error text streams into a single stream
+#$ -j y
+
+## Name my job, to make it easier to find in the queue
+#$ -N MyJobTitle
+
+## And finally, we run the job we came here to do.
+$HOME/ProgramDir/ProgramName ProgramArguments
+
+## OR, for the case of MPI-capable jobs
+mpirun $HOME/path/MpiJobName
+
+## Send email when a job is aborted (a), begins (b), and/or ends (e)
+#$ -m abe
+
+## Email address to send the email to based on the above line.
+#$ -M myemail@ksu.edu
+

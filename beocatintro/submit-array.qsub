@@ -1,0 +1,6 @@
+#!/bin/bash
+#$ -l mem=2G,h_rt=200:00:00
+#$ -j y
+#$ -o $HOME/error_$TASK_ID
+#$ -m abe
+R --no-save -q < $HOME/beocatintro/arrayexample.R
