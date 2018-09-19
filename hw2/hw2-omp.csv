@@ -1,41 +1,40 @@
-task id,number of threads,node,runtime,virtual memory,physical memory
-./slurm-1431897.out:DATA,2, elf43,769.88, vMem 17304 KB, pMem 604KB
-./slurm-1431885.out:DATA,2, elf39,772.672, vMem 17304 KB, pMem 604KB
-./slurm-1431893.out:DATA,2, elf39,774.188, vMem 17304 KB, pMem 604KB
-./slurm-1431905.out:DATA,2, elf43,774.495, vMem 17304 KB, pMem 604KB
-./slurm-1431901.out:DATA,2, elf43,774.973, vMem 17304 KB, pMem 604KB
-./slurm-1431917.out:DATA,2, elf52,775.859, vMem 17304 KB, pMem 604KB
-./slurm-1431913.out:DATA,2, elf52,775.919, vMem 17304 KB, pMem 604KB
-./slurm-1431889.out:DATA,2, elf39,776.338, vMem 17304 KB, pMem 604KB
-./slurm-1431909.out:DATA,2, elf43,814.071, vMem 17304 KB, pMem 604KB
-./slurm-1431881.out:DATA,2, elf39,817.429, vMem 17304 KB, pMem 604KB
-./slurm-1431898.out:DATA,4, elf38,386.443, vMem 33696 KB, pMem 604KB
-./slurm-1431914.out:DATA,4, elf39,386.516, vMem 33696 KB, pMem 604KB
-./slurm-1431886.out:DATA,4, elf37,388.06, vMem 33696 KB, pMem 604KB
-./slurm-1431918.out:DATA,4, elf39,388.414, vMem 33696 KB, pMem 604KB
-./slurm-1431894.out:DATA,4, elf37,388.438, vMem 33696 KB, pMem 604KB
-./slurm-1431902.out:DATA,4, elf38,388.533, vMem 33696 KB, pMem 604KB
-./slurm-1431910.out:DATA,4, elf38,388.542, vMem 33696 KB, pMem 604KB
-./slurm-1431882.out:DATA,4, elf37,427.238, vMem 33696 KB, pMem 604KB
-./slurm-1431890.out:DATA,4, elf37,427.574, vMem 33696 KB, pMem 604KB
-./slurm-1431906.out:DATA,4, elf38,428.725, vMem 33696 KB, pMem 604KB
-./slurm-1431915.out:DATA,8, elf36,194.436, vMem 66480 KB, pMem 604KB
-./slurm-1431887.out:DATA,8, elf25,194.478, vMem 66480 KB, pMem 668KB
-./slurm-1431899.out:DATA,8, elf32,194.484, vMem 66480 KB, pMem 604KB
-./slurm-1431907.out:DATA,8, elf35,194.553, vMem 66480 KB, pMem 604KB
-./slurm-1431919.out:DATA,8, elf36,194.611, vMem 66480 KB, pMem 604KB
-./slurm-1431895.out:DATA,8, elf27,194.645, vMem 66480 KB, pMem 604KB
-./slurm-1431911.out:DATA,8, elf35,194.771, vMem 66480 KB, pMem 604KB
-./slurm-1431903.out:DATA,8, elf32,194.853, vMem 66480 KB, pMem 604KB
-./slurm-1431891.out:DATA,8, elf27,194.919, vMem 66480 KB, pMem 604KB
-./slurm-1431883.out:DATA,8, elf25,230.429, vMem 66480 KB, pMem 604KB
-./slurm-1431900.out:DATA,16, elf35,98.026, vMem 132048 KB, pMem 856KB
-./slurm-1431892.out:DATA,16, elf27,98.509, vMem 132048 KB, pMem 604KB
-./slurm-1431884.out:DATA,16, elf09,98.616, vMem 132048 KB, pMem 604KB
-./slurm-1431896.out:DATA,16, elf32,99.207, vMem 132048 KB, pMem 668KB
-./slurm-1431888.out:DATA,16, elf25,99.28, vMem 132048 KB, pMem 604KB
-./slurm-1431904.out:DATA,16, elf36,99.331, vMem 132048 KB, pMem 604KB
-./slurm-1431912.out:DATA,16, elf38,99.753, vMem 132048 KB, pMem 604KB
-./slurm-1431908.out:DATA,16, elf37,100.482, vMem 132048 KB, pMem 860KB
-./slurm-1431916.out:DATA,16, elf39,104.493, vMem 132048 KB, pMem 604KB
-./slurm-1431920.out:DATA,16, elf09,115.168, vMem 132048 KB, pMem 604KB
+./slurm-1431881.out:DATA, 2, elf39, 817.429000, vMem 17304 KB, pMem 604KB
+./slurm-1431882.out:DATA, 4, elf37, 427.238000, vMem 33696 KB, pMem 604KB
+./slurm-1431883.out:DATA, 8, elf25, 230.429000, vMem 66480 KB, pMem 604KB
+./slurm-1431884.out:DATA, 16, elf09, 98.616000, vMem 132048 KB, pMem 604KB
+./slurm-1431885.out:DATA, 2, elf39, 772.672000, vMem 17304 KB, pMem 604KB
+./slurm-1431886.out:DATA, 4, elf37, 388.060000, vMem 33696 KB, pMem 604KB
+./slurm-1431887.out:DATA, 8, elf25, 194.478000, vMem 66480 KB, pMem 668KB
+./slurm-1431888.out:DATA, 16, elf25, 99.280000, vMem 132048 KB, pMem 604KB
+./slurm-1431889.out:DATA, 2, elf39, 776.338000, vMem 17304 KB, pMem 604KB
+./slurm-1431890.out:DATA, 4, elf37, 427.574000, vMem 33696 KB, pMem 604KB
+./slurm-1431891.out:DATA, 8, elf27, 194.919000, vMem 66480 KB, pMem 604KB
+./slurm-1431892.out:DATA, 16, elf27, 98.509000, vMem 132048 KB, pMem 604KB
+./slurm-1431893.out:DATA, 2, elf39, 774.188000, vMem 17304 KB, pMem 604KB
+./slurm-1431894.out:DATA, 4, elf37, 388.438000, vMem 33696 KB, pMem 604KB
+./slurm-1431895.out:DATA, 8, elf27, 194.645000, vMem 66480 KB, pMem 604KB
+./slurm-1431896.out:DATA, 16, elf32, 99.207000, vMem 132048 KB, pMem 668KB
+./slurm-1431897.out:DATA, 2, elf43, 769.880000, vMem 17304 KB, pMem 604KB
+./slurm-1431898.out:DATA, 4, elf38, 386.443000, vMem 33696 KB, pMem 604KB
+./slurm-1431899.out:DATA, 8, elf32, 194.484000, vMem 66480 KB, pMem 604KB
+./slurm-1431900.out:DATA, 16, elf35, 98.026000, vMem 132048 KB, pMem 856KB
+./slurm-1431901.out:DATA, 2, elf43, 774.973000, vMem 17304 KB, pMem 604KB
+./slurm-1431902.out:DATA, 4, elf38, 388.533000, vMem 33696 KB, pMem 604KB
+./slurm-1431903.out:DATA, 8, elf32, 194.853000, vMem 66480 KB, pMem 604KB
+./slurm-1431904.out:DATA, 16, elf36, 99.331000, vMem 132048 KB, pMem 604KB
+./slurm-1431905.out:DATA, 2, elf43, 774.495000, vMem 17304 KB, pMem 604KB
+./slurm-1431906.out:DATA, 4, elf38, 428.725000, vMem 33696 KB, pMem 604KB
+./slurm-1431907.out:DATA, 8, elf35, 194.553000, vMem 66480 KB, pMem 604KB
+./slurm-1431908.out:DATA, 16, elf37, 100.482000, vMem 132048 KB, pMem 860KB
+./slurm-1431909.out:DATA, 2, elf43, 814.071000, vMem 17304 KB, pMem 604KB
+./slurm-1431910.out:DATA, 4, elf38, 388.542000, vMem 33696 KB, pMem 604KB
+./slurm-1431911.out:DATA, 8, elf35, 194.771000, vMem 66480 KB, pMem 604KB
+./slurm-1431912.out:DATA, 16, elf38, 99.753000, vMem 132048 KB, pMem 604KB
+./slurm-1431913.out:DATA, 2, elf52, 775.919000, vMem 17304 KB, pMem 604KB
+./slurm-1431914.out:DATA, 4, elf39, 386.516000, vMem 33696 KB, pMem 604KB
+./slurm-1431915.out:DATA, 8, elf36, 194.436000, vMem 66480 KB, pMem 604KB
+./slurm-1431916.out:DATA, 16, elf39, 104.493000, vMem 132048 KB, pMem 604KB
+./slurm-1431917.out:DATA, 2, elf52, 775.859000, vMem 17304 KB, pMem 604KB
+./slurm-1431918.out:DATA, 4, elf39, 388.414000, vMem 33696 KB, pMem 604KB
+./slurm-1431919.out:DATA, 8, elf36, 194.611000, vMem 66480 KB, pMem 604KB
+./slurm-1431920.out:DATA, 16, elf09, 115.168000, vMem 132048 KB, pMem 604KB

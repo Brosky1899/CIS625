@@ -33,7 +33,7 @@ int parseLine(char *line) {
 	return i;
 }
 
-void GetProcessMemory(processMem_t* processMem) {
+void processMemory(processMem_t* processMem) {
 	FILE *file = fopen("/proc/self/status", "r");
 	char line[128];
 
@@ -79,8 +79,7 @@ int main(int argc, char *argv[]) {
 	double elapsedTime;
   void *status;
  
-	numThreads = atoi(argv[1]);
-	pthread_t threads[numThreads];
+	pthread_t threads[atoi(argv[1])];
 	pthread_attr_t attr;
 	
 	pthread_attr_init(&attr);
@@ -112,10 +111,10 @@ int main(int argc, char *argv[]) {
 	elapsedTime += (t2.tv_usec - t1.tv_usec) / 1000.0; // us to ms
  
  	processMem_t myMem; 
-	GetProcessMemory(&myMem);
+	processMemory(&myMem);
  
 	pthread_mutex_destroy(&mutexsum);
-	printf("DATA, %d, %s, %f, vMem %u KB, pMem %uKB\n", numThreads, getenv("SLURMD_NODENAME"),  elapsedTime, myMem.virtualMem, myMem.physicalMem);
+	printf("DATA, %d, %s, %f, vMem %u KB, pMem %u KB\n", numThreads, getenv("SLURMD_NODENAME"),  elapsedTime, myMem.virtualMem, myMem.physicalMem);
 	pthread_exit(NULL);
 	return 0;
 }

@@ -13,7 +13,6 @@
 #define bigArraySize 100000
 
 int bigArray[bigArraySize];
-int numThreads;
 double sum;
 
 typedef struct {
@@ -31,7 +30,7 @@ int parseLine(char *line) {
 	return i;
 }
 
-void GetProcessMemory(processMem_t* processMem) {
+void processMemory(processMem_t* processMem) {
 	FILE *file = fopen("/proc/self/status", "r");
 	char line[128];
 
@@ -53,7 +52,7 @@ void *add(int myId) {
 	double localSum = 0.0, x = 0.0;
 	double st = 1.0/((double) NUM_ITER);
 	
-	#pragma omp private(myId,i,startPos,endPos,localSum,x)
+	#pragma omp private(myId,x,i,localSum,startPos,endPos)
 	{
 		startPos = myId * (NUM_ITER / numThreads);
 		endPos = startPos + (NUM_ITER / numThreads);
@@ -68,6 +67,7 @@ void *add(int myId) {
 	
 	#pragma omp critical
 	{
+ //keep writing to variable one at a time
 		sum += localSum;
 	}
 }
@@ -76,8 +76,7 @@ int main(int argc, char *argv[]) {
   struct timeval t1, t2;
 	double elapsedTime;
  
-  numThreads = atoi(argv[1]);
-	omp_set_num_threads(numThreads);
+	omp_set_num_threads(atoi(argv[1])); //sets number of threads
 	
  	gettimeofday(&t1, NULL);
 	#pragma omp parallel
@@ -92,8 +91,8 @@ int main(int argc, char *argv[]) {
 	elapsedTime += (t2.tv_usec - t1.tv_usec) / 1000.0; // us to ms
  
  	processMem_t myMem; 
-	GetProcessMemory(&myMem);
+	processMemory(&myMem);
  
-	printf("DATA, %d, %s, %f, vMem %u KB, pMem %uKB\n", numThreads, getenv("SLURMD_NODENAME"),  elapsedTime, myMem.virtualMem, myMem.physicalMem);
+	printf("DATA, %d, %s, %f, vMem %u KB, pMem %u KB\n", numThreads, getenv("SLURMD_NODENAME"),  elapsedTime, myMem.virtualMem, myMem.physicalMem);
 	return 0;
 }
