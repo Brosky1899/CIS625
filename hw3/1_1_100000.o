@@ -1,0 +1,18 @@
+Read in 50000 words
+Read in 100000 lines averaging 8 chars/line
+[elf09:06326] *** Process received signal ***
+[elf09:06326] Signal: Floating point exception (8)
+[elf09:06326] Signal code: Integer divide-by-zero (1)
+[elf09:06326] Failing at address: 0x401e8f
+[elf09:06326] [ 0] /lib64/libc.so.6(+0x362f0)[0x7f27e97eb2f0]
+[elf09:06326] [ 1] hw3[0x401e8f]
+[elf09:06326] [ 2] /lib64/libc.so.6(__libc_start_main+0xf5)[0x7f27e97d7445]
+[elf09:06326] [ 3] hw3[0x401ae9]
+[elf09:06326] *** End of error message ***
+-------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+-------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 6326 on node elf09 exited on signal 8 (Floating point exception).
+--------------------------------------------------------------------------
